@@ -18,6 +18,8 @@ function App() {
     let explosivesList: Array<explosive> = loadJsonExplosives(explosives.Explosives)
 
     const [currentExplosive, setCurrentExplosive] = useState({name:'', ref: 0})
+    const [unit, setUnit] = useState('Pounds')
+
     return (
         <>
             <h1>NEW Calculator</h1>
@@ -29,6 +31,19 @@ function App() {
                 )}
             </DropdownButton>
             <p>Current explosive is {currentExplosive.name}</p>
+            <div className="form-check">
+                <input className="form-check-input" type="radio" name="flexRadioDefault" id="Radio_Pounds" onClick={() => setUnit('Pounds')} defaultChecked={true}/>
+                    <label className="form-check-label" htmlFor="Radio_Pounds">
+                        Pounds
+                    </label>
+            </div>
+            <div className="form-check">
+                <input className="form-check-input" type="radio" name="flexRadioDefault" id="Radio_Grains" onClick={() => setUnit('Grains')} defaultChecked={false}/>
+                    <label className="form-check-label" htmlFor="Radio_Grains">
+                        Grains
+                    </label>
+            </div>
+            <p>Current unit is {unit}</p>
         </>
     )
 }
