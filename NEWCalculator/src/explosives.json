@@ -1,0 +1,16 @@
+{
+  "Explosives": [
+    {
+      "Name": "Ammonium Nitrate",
+      "REF": 0.42
+    },
+    {
+      "Name": "Black Powder",
+      "REF": 0.55
+    },
+    {
+      "Name": "Tannerite",
+      "REF": 0.55
+    }
+  ]
+}
